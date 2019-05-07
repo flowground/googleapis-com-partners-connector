@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "address": {
+            "type": "string"
+        },
+        "companyId": {
+            "required": true,
+            "type": "string"
+        },
+        "currencyCode": {
+            "type": "string"
+        },
+        "orderBy": {
+            "type": "string"
+        },
+        "view": {
+            "type": "string",
+            "enum": [
+                "COMPANY_VIEW_UNSPECIFIED",
+                "CV_GOOGLE_PARTNER_SEARCH"
+            ]
+        },
+        "upload_protocol": {
+            "type": "string"
+        },
+        "requestMetadata_experimentIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "requestMetadata_locale": {
+            "type": "string"
+        },
+        "requestMetadata_partnersSessionId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSourceId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSubId": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_ipAddress": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_userId": {
+            "type": "string"
+        }
+    }
+}

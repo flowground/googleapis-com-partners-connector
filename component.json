@@ -1,0 +1,323 @@
+{
+    "title": "Google Partners",
+    "description": "Searches certified companies and creates contact leads with them, and also audits the usage of clients.",
+    "docsUrl": "https://developers.google.com/partners/",
+    "url": "https://api.apis.guru/v2/specs/googleapis.com/partners/v2/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://partners.googleapis.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "partners_analytics_list": {
+            "main": "./lib/actions/partners_analytics_list.js",
+            "title": "Lists analytics data for a user's associated company.\nShould only be called within the context of an authorized logged in user.",
+            "description": "Lists analytics data for a user's associated company.\nShould only be called within the context of an authorized logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_analytics_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_clientMessages_log": {
+            "main": "./lib/actions/partners_clientMessages_log.js",
+            "title": "Logs a generic message from the client, such as\n`Failed to render component`, `Profile page is running slow`,\n`More than 500 users have accessed this result.`, etc.",
+            "description": "Logs a generic message from the client, such as\n`Failed to render component`, `Profile page is running slow`,\n`More than 500 users have accessed this result.`, etc.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_clientMessages_log.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_companies_list": {
+            "main": "./lib/actions/partners_companies_list.js",
+            "title": "Lists companies.",
+            "description": "Lists companies.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_companies_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_updateCompanies": {
+            "main": "./lib/actions/partners_updateCompanies.js",
+            "title": "Update company.\nShould only be called within the context of an authorized logged in user.",
+            "description": "Update company.\nShould only be called within the context of an authorized logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_updateCompanies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_companies_get": {
+            "main": "./lib/actions/partners_companies_get.js",
+            "title": "Gets a company.",
+            "description": "Gets a company.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_companies_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_companies_leads_create": {
+            "main": "./lib/actions/partners_companies_leads_create.js",
+            "title": "Creates an advertiser lead for the given company ID.",
+            "description": "Creates an advertiser lead for the given company ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_companies_leads_create.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_leads_list": {
+            "main": "./lib/actions/partners_leads_list.js",
+            "title": "Lists advertiser leads for a user's associated company.\nShould only be called within the context of an authorized logged in user.",
+            "description": "Lists advertiser leads for a user's associated company.\nShould only be called within the context of an authorized logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_leads_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_updateLeads": {
+            "main": "./lib/actions/partners_updateLeads.js",
+            "title": "Updates the specified lead.",
+            "description": "Updates the specified lead.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_updateLeads.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_offers_list": {
+            "main": "./lib/actions/partners_offers_list.js",
+            "title": "Lists the Offers available for the current user",
+            "description": "Lists the Offers available for the current user",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_offers_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_offers_history_list": {
+            "main": "./lib/actions/partners_offers_history_list.js",
+            "title": "Lists the Historical Offers for the current user (or user's entire company)",
+            "description": "Lists the Historical Offers for the current user (or user's entire company)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_offers_history_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_getPartnersstatus": {
+            "main": "./lib/actions/partners_getPartnersstatus.js",
+            "title": "Gets Partners Status of the logged in user's agency.\nShould only be called if the logged in user is the admin of the agency.",
+            "description": "Gets Partners Status of the logged in user's agency.\nShould only be called if the logged in user is the admin of the agency.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_getPartnersstatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_userEvents_log": {
+            "main": "./lib/actions/partners_userEvents_log.js",
+            "title": "Logs a user event.",
+            "description": "Logs a user event.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_userEvents_log.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_userStates_list": {
+            "main": "./lib/actions/partners_userStates_list.js",
+            "title": "Lists states for current user.",
+            "description": "Lists states for current user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_userStates_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_users_updateProfile": {
+            "main": "./lib/actions/partners_users_updateProfile.js",
+            "title": "Updates a user's profile. A user can only update their own profile and\nshould only be called within the context of a logged in user.",
+            "description": "Updates a user's profile. A user can only update their own profile and\nshould only be called within the context of a logged in user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_users_updateProfile.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_users_get": {
+            "main": "./lib/actions/partners_users_get.js",
+            "title": "Gets a user.",
+            "description": "Gets a user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_users_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_users_deleteCompanyRelation": {
+            "main": "./lib/actions/partners_users_deleteCompanyRelation.js",
+            "title": "Deletes a user's company relation. Unaffiliaites the user from a company.",
+            "description": "Deletes a user's company relation. Unaffiliaites the user from a company.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_users_deleteCompanyRelation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "partners_users_createCompanyRelation": {
+            "main": "./lib/actions/partners_users_createCompanyRelation.js",
+            "title": "Creates a user's company relation. Affiliates the user to a company.",
+            "description": "Creates a user's company relation. Affiliates the user to a company.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/partners_users_createCompanyRelation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

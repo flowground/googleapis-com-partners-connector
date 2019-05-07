@@ -1,0 +1,210 @@
+{
+    "type": "object",
+    "properties": {
+        "oauth_token": {
+            "type": "string"
+        },
+        "pp": {
+            "type": "boolean",
+            "default": true
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "uploadType": {
+            "type": "string"
+        },
+        "upload_protocol": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "The profile information of a Partners user.",
+            "properties": {
+                "address": {
+                    "description": "The user's mailing address, contains multiple fields.",
+                    "properties": {
+                        "address": {
+                            "description": "The single string version of the address.",
+                            "type": "string"
+                        },
+                        "addressLine": {
+                            "description": "The following address lines represent the most specific part of any\naddress.",
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "administrativeArea": {
+                            "description": "Top-level administrative subdivision of this country.",
+                            "type": "string"
+                        },
+                        "dependentLocality": {
+                            "description": "Dependent locality or sublocality. Used for UK dependent localities, or\nneighborhoods or boroughs in other locations.",
+                            "type": "string"
+                        },
+                        "languageCode": {
+                            "description": "Language code of the address. Should be in BCP 47 format.",
+                            "type": "string"
+                        },
+                        "latLng": {
+                            "description": "The latitude and longitude of the location, in degrees.",
+                            "properties": {
+                                "latitude": {
+                                    "description": "The latitude in degrees. It must be in the range [-90.0, +90.0].",
+                                    "format": "double",
+                                    "type": "number"
+                                },
+                                "longitude": {
+                                    "description": "The longitude in degrees. It must be in the range [-180.0, +180.0].",
+                                    "format": "double",
+                                    "type": "number"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "locality": {
+                            "description": "Generally refers to the city/town portion of an address.",
+                            "type": "string"
+                        },
+                        "postalCode": {
+                            "description": "Values are frequently alphanumeric.",
+                            "type": "string"
+                        },
+                        "regionCode": {
+                            "description": "CLDR (Common Locale Data Repository) region code .",
+                            "type": "string"
+                        },
+                        "sortingCode": {
+                            "description": "Use of this code is very country-specific, but will refer to a secondary\nclassification code for sorting mail.",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "adwordsManagerAccount": {
+                    "description": "If the user has edit access to multiple accounts, the user can choose the\npreferred account and it is used when a personal account is needed. Can\nbe empty.",
+                    "format": "int64",
+                    "type": "string"
+                },
+                "channels": {
+                    "description": "A list of ids representing which channels the user selected they were in.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "emailAddress": {
+                    "description": "The email address the user has selected on the Partners site as primary.",
+                    "type": "string"
+                },
+                "emailOptIns": {
+                    "description": "The list of opt-ins for the user, related to communication preferences.",
+                    "properties": {
+                        "marketComm": {
+                            "description": "An opt-in about receiving email from Partners marketing teams. Includes\nmember-only events and special promotional offers for Google products.",
+                            "type": "boolean"
+                        },
+                        "performanceSuggestions": {
+                            "description": "An opt-in about receiving email with customized AdWords campaign management\ntips.",
+                            "type": "boolean"
+                        },
+                        "phoneContact": {
+                            "description": "An opt-in to allow recieivng phone calls about their Partners account.",
+                            "type": "boolean"
+                        },
+                        "physicalMail": {
+                            "description": "An opt-in to receive special promotional gifts and material in the mail.",
+                            "type": "boolean"
+                        },
+                        "specialOffers": {
+                            "description": "An opt-in about receiving email regarding new features and products.",
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "familyName": {
+                    "description": "The user's family name.",
+                    "type": "string"
+                },
+                "givenName": {
+                    "description": "The user's given name.",
+                    "type": "string"
+                },
+                "industries": {
+                    "description": "A list of ids representing which industries the user selected.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "jobFunctions": {
+                    "description": "A list of ids represnting which job categories the user selected.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "languages": {
+                    "description": "The list of languages this user understands.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "markets": {
+                    "description": "A list of ids representing which markets the user was interested in.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "migrateToAfa": {
+                    "description": "Whether or not to migrate the user's exam data to Academy for Ads.",
+                    "type": "boolean"
+                },
+                "phoneNumber": {
+                    "description": "The user's phone number.",
+                    "type": "string"
+                },
+                "primaryCountryCode": {
+                    "description": "The user's primary country, an ISO 2-character code.",
+                    "type": "string"
+                },
+                "profilePublic": {
+                    "description": "Whether the user's public profile is visible to anyone with the URL.",
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "requestMetadata_experimentIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "requestMetadata_locale": {
+            "type": "string"
+        },
+        "requestMetadata_partnersSessionId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSourceId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSubId": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_ipAddress": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_userId": {
+            "type": "string"
+        }
+    }
+}

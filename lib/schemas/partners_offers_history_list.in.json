@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "entireCompany": {
+            "type": "boolean"
+        },
+        "orderBy": {
+            "type": "string"
+        },
+        "pageSize": {
+            "type": "integer"
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "uploadType": {
+            "type": "string"
+        },
+        "upload_protocol": {
+            "type": "string"
+        },
+        "requestMetadata_experimentIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "requestMetadata_locale": {
+            "type": "string"
+        },
+        "requestMetadata_partnersSessionId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSourceId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSubId": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_ipAddress": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_userId": {
+            "type": "string"
+        }
+    }
+}

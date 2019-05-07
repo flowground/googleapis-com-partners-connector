@@ -1,0 +1,138 @@
+{
+    "type": "object",
+    "properties": {
+        "address": {
+            "type": "string"
+        },
+        "companyName": {
+            "type": "string"
+        },
+        "gpsMotivations": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "GPS_MOTIVATION_UNSPECIFIED",
+                    "GPSM_HELP_WITH_ADVERTISING",
+                    "GPSM_HELP_WITH_WEBSITE",
+                    "GPSM_NO_WEBSITE"
+                ],
+                "type": "string"
+            }
+        },
+        "industries": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "INDUSTRY_UNSPECIFIED",
+                    "I_AUTOMOTIVE",
+                    "I_BUSINESS_TO_BUSINESS",
+                    "I_CONSUMER_PACKAGED_GOODS",
+                    "I_EDUCATION",
+                    "I_FINANCE",
+                    "I_HEALTHCARE",
+                    "I_MEDIA_AND_ENTERTAINMENT",
+                    "I_RETAIL",
+                    "I_TECHNOLOGY",
+                    "I_TRAVEL"
+                ],
+                "type": "string"
+            }
+        },
+        "languageCodes": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "orderBy": {
+            "type": "string"
+        },
+        "pageSize": {
+            "type": "integer"
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "services": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "SERVICE_UNSPECIFIED",
+                    "S_ADVANCED_ADWORDS_SUPPORT",
+                    "S_ADVERTISING_ON_GOOGLE",
+                    "S_AN_ENHANCED_WEBSITE",
+                    "S_AN_ONLINE_MARKETING_PLAN",
+                    "S_MOBILE_AND_VIDEO_ADS",
+                    "S_MOBILE_WEBSITE_SERVICES"
+                ],
+                "type": "string"
+            }
+        },
+        "specializations": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "BADGE_SPECIALIZATION_UNKNOWN",
+                    "BADGE_SPECIALIZATION_ADWORDS_SEARCH",
+                    "BADGE_SPECIALIZATION_ADWORDS_DISPLAY",
+                    "BADGE_SPECIALIZATION_ADWORDS_MOBILE",
+                    "BADGE_SPECIALIZATION_ADWORDS_VIDEO",
+                    "BADGE_SPECIALIZATION_ADWORDS_SHOPPING"
+                ],
+                "type": "string"
+            }
+        },
+        "view": {
+            "type": "string",
+            "enum": [
+                "COMPANY_VIEW_UNSPECIFIED",
+                "CV_GOOGLE_PARTNER_SEARCH"
+            ]
+        },
+        "websiteUrl": {
+            "type": "string"
+        },
+        "maxMonthlyBudget_currencyCode": {
+            "type": "string"
+        },
+        "maxMonthlyBudget_nanos": {
+            "type": "integer"
+        },
+        "maxMonthlyBudget_units": {
+            "type": "string"
+        },
+        "minMonthlyBudget_currencyCode": {
+            "type": "string"
+        },
+        "minMonthlyBudget_nanos": {
+            "type": "integer"
+        },
+        "minMonthlyBudget_units": {
+            "type": "string"
+        },
+        "requestMetadata_experimentIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "requestMetadata_locale": {
+            "type": "string"
+        },
+        "requestMetadata_partnersSessionId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSourceId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSubId": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_ipAddress": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_userId": {
+            "type": "string"
+        }
+    }
+}

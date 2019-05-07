@@ -1,0 +1,153 @@
+{
+    "type": "object",
+    "properties": {
+        "updateMask": {
+            "type": "string"
+        },
+        "pp": {
+            "type": "boolean",
+            "default": true
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "uploadType": {
+            "type": "string"
+        },
+        "upload_protocol": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "A lead resource that represents an advertiser contact for a `Company`. These\nare usually generated via Google Partner Search (the advertiser portal).",
+            "properties": {
+                "adwordsCustomerId": {
+                    "description": "The AdWords Customer ID of the lead.",
+                    "format": "int64",
+                    "type": "string"
+                },
+                "comments": {
+                    "description": "Comments lead source gave.",
+                    "type": "string"
+                },
+                "createTime": {
+                    "description": "Timestamp of when this lead was created.",
+                    "format": "google-datetime",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "Email address of lead source.",
+                    "type": "string"
+                },
+                "familyName": {
+                    "description": "Last name of lead source.",
+                    "type": "string"
+                },
+                "givenName": {
+                    "description": "First name of lead source.",
+                    "type": "string"
+                },
+                "gpsMotivations": {
+                    "description": "List of reasons for using Google Partner Search and creating a lead.",
+                    "items": {
+                        "enum": [
+                            "GPS_MOTIVATION_UNSPECIFIED",
+                            "GPSM_HELP_WITH_ADVERTISING",
+                            "GPSM_HELP_WITH_WEBSITE",
+                            "GPSM_NO_WEBSITE"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "description": "ID of the lead.",
+                    "type": "string"
+                },
+                "languageCode": {
+                    "description": "Language code of the lead's language preference, as defined by\n<a href=\"https://tools.ietf.org/html/bcp47\">BCP 47</a>\n(IETF BCP 47, \"Tags for Identifying Languages\").",
+                    "type": "string"
+                },
+                "marketingOptIn": {
+                    "description": "Whether or not the lead signed up for marketing emails",
+                    "type": "boolean"
+                },
+                "minMonthlyBudget": {
+                    "description": "The minimum monthly budget lead source is willing to spend.",
+                    "properties": {
+                        "currencyCode": {
+                            "description": "The 3-letter currency code defined in ISO 4217.",
+                            "type": "string"
+                        },
+                        "nanos": {
+                            "description": "Number of nano (10^-9) units of the amount.\nThe value must be between -999,999,999 and +999,999,999 inclusive.\nIf `units` is positive, `nanos` must be positive or zero.\nIf `units` is zero, `nanos` can be positive, zero, or negative.\nIf `units` is negative, `nanos` must be negative or zero.\nFor example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "units": {
+                            "description": "The whole units of the amount.\nFor example if `currencyCode` is `\"USD\"`, then 1 unit is one US dollar.",
+                            "format": "int64",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "phoneNumber": {
+                    "description": "Phone number of lead source.",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "The lead's state in relation to the company.",
+                    "enum": [
+                        "LEAD_STATE_UNSPECIFIED",
+                        "LEAD",
+                        "CONTACTED",
+                        "CLIENT",
+                        "OTHER"
+                    ],
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Type of lead.",
+                    "enum": [
+                        "LEAD_TYPE_UNSPECIFIED",
+                        "LT_GPS"
+                    ],
+                    "type": "string"
+                },
+                "websiteUrl": {
+                    "description": "Website URL of lead source.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "requestMetadata_experimentIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "requestMetadata_locale": {
+            "type": "string"
+        },
+        "requestMetadata_partnersSessionId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSourceId": {
+            "type": "string"
+        },
+        "requestMetadata_trafficSource_trafficSubId": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_ipAddress": {
+            "type": "string"
+        },
+        "requestMetadata_userOverrides_userId": {
+            "type": "string"
+        }
+    }
+}
